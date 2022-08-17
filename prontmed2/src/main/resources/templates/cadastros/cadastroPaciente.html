@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Faça-nos um cadastro pessoal para abrir uma conta corrente">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">">
+    <link media="projection, screen, tv" rel="stylesheet" type="text/css" href="/css/cadastropaciente.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Cadastro Paciente</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <section>
+            <img alt="logoprontmed" src="/assets/img.png">
+            <h1>Cadastro Paciente</h1>
+                <form action="/sent.html" method="get" data-jsv-form="true" data-jsv-form-invalid-message="Por favor, corrija os erros abaixo" data-jsv-form-incomplete-tooltip="Por favor, preencha os campos">
+                    
+                    <div class="group">
+                        <div class="controls">
+                            <label for="name">Nome completo*</label>
+                            <input type="text" id="name" name="name" data-jsv-validators="require" data-jsv-field-error-require="O campo não pode ser vazio" />
+                        </div>
+
+                        <div class="grid">
+                            <div class="col-1-2">
+                                <div class="controls">
+                                    <label for="email">E-mail*</label>
+                                    <input type="text" id="email" name="email" placeholder="E-mail" data-jsv-validators="pattern" data-jsv-pattern="^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$" data-jsv-field-error-pattern="Por favor, valide seu número de celular"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid">
+                            <div class="col-1-3">
+                                <div class="controls">
+                                    <label for="cpf">CPF*</label>
+                                    <input type="text" id="cpf" name="cpf" data-jsv-validators="require" data-jsv-field-error-require="Não pode deixar campo de CPF/CNPJ vazio" />
+                                </div>
+                            </div>
+
+                            <div class="col-1-3">
+                                <div class="controls">
+                                    <label for="rg">RG</label>
+                                    <input type="number" id="rg" name="rg">
+                                </div>
+                            </div>
+
+                            <div class="col-1-3 col-1-3-sm">
+                                <div class="controls">
+                                    <label for="sex">Gênero</label>
+                                    <select name="sex" id="sex">
+                                    <option value="blank">Selecione</option>
+                                    <option value="male">Masculino</option>
+                                    <option value="female">Feminino</option>
+                                    <option value="other">Outros</option>
+                                  </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid">
+                            <div class="col-2-3">
+                                <div class="controls">
+                                    <label for="street">Endereço*</label>
+                                    <input type="text" id="street" name="street" data-jsv-validators="require" data-jsv-field-error-require="Não pode deixar campo vazio" />
+                                </div>
+                            </div>
+
+                            <div class="col-1-3">
+                                <div class="controls">
+                                    <label for="number">Número*</label>
+                                    <input type="number" id="number" name="number" data-jsv-validators="require" data-jsv-field-error-require="O número não pode ser vazio" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="controls">
+                            <label for="neighbourhood">Bairro</label>
+                            <input type="text" id="neighbourhood" name="neighbourhood">
+                        </div>
+
+                        <div class="grid">
+                            <div class="col-1-3">
+                                <div class="controls">
+                                    <label for="city">Cidade*</label>
+                                    <input type="text" id="city" name="city" data-jsv-validators="require" data-jsv-field-error-require="Não pode deixar campo vazio"/>
+                                </div>
+                            </div>
+
+                            <div class="col-1-3">
+                                <div class="controls">
+                                    <label for="state">Estado*</label>
+                                    <select name="state" id="state" data-jsv-validators="require" />
+                                      <option value="selecione">Selecione</option>
+                                      <option value="AC">Acre</option>
+                                      <option value="AL">Alagoas</option>
+                                      <option value="AP">Amapá</option>
+                                      <option value="AM">Amazonas</option>
+                                      <option value="BA">Bahia</option>
+                                      <option value="CE">Ceará</option>
+                                      <option value="DF">Distrito Federal</option>
+                                      <option value="ES">Espírito Santo</option>
+                                      <option value="GO">Goiás</option>
+                                      <option value="MA">Maranhão</option>
+                                      <option value="MT">Mato Grosso</option>
+                                      <option value="MS">Mato Grosso do Sul</option>
+                                      <option value="MG">Minas Gerais</option>
+                                      <option value="PA">Pará</option>
+                                      <option value="PB">Paraíba</option>
+                                      <option value="PR">Paraná</option>
+                                      <option value="PE">Pernambuco</option>
+                                      <option value="PI">Piauí</option>
+                                      <option value="RJ">Rio de Janeiro</option>
+                                      <option value="RN">Rio Grande do Norte</option>
+                                      <option value="RS">Rio Grande do Sul</option>
+                                      <option value="RO">Rondônia</option>
+                                      <option value="RR">Roraima</option>
+                                      <option value="SC">Santa Catarina</option>
+                                      <option value="SP">São Paulo</option>
+                                      <option value="SE">Sergipe</option>
+                                      <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-1-3">
+                                <div class="controls">
+                                    <label for="post-code">CEP</label>
+                                    <input type="text" id="post-code" name="post-code" pattern="\d{5}-?\d{3}" placeholder="XXXXX-XXX">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid">
+                            <div class="col-1-2">
+                                <div class="controls">
+                                    <label for="email">E-mail*</label>
+                                    <input type="text" id="email" name="email" placeholder="E-mail" data-jsv-validators="pattern" data-jsv-pattern="^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$" data-jsv-field-error-pattern="Por favor, valide seu número de celular"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1-8">
+                            <div  class="controls2">
+                                <a class="menu">CONFIRMAR</a>
+                                <a class="menu">CANCELAR</a>
+                        </div>
+                        </div>
+                        </div>
+
+                </form>
+        </section>
+    </div>
+    <p><small> O Preenchimento é obrigatório.</small></p>
+    <footer>
+
+        <div class="container.footer">
+            <p>© Projeto Start | ProntMED - O futuro do Gerenciamento</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
