@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link media="projection, screen, tv" rel="stylesheet" type="text/css" href="../css/cadastroPaciente.css">
+    
+    <title>Cadastro Paciente</title>
+</head>
+<body>
+<header>
+    <img alt="logoprontmed" src="../assets/img.png">
+</header>
+
+<form action="" method="post">
+    <div class="principal">
+
+        <div class="linha">
+            <label for="name">Nome completo*</label>
+            <input type="text" id="name" name="name" 
+
+            <label for="email">E-mail*</label>
+            <input type="text" id="email" name="email" 
+            <label for="cpf">CPF*</label>
+            <input type="text" id="cpf" name="cpf"
+        </div>
+        <div class="linha"> 
+
+            <label for="senha">Senha</label>
+            <input type="password" id="password" name="senha">
+
+
+            <label for="rg">RG</label>
+                <input type="number" id="rg" name="rg">
+                <label for="sex">Gênero</label>
+                <select name="sex" id="sex">
+                <option value="blank">Selecione</option>
+                <option value="male">Masculino</option>
+                <option value="female">Feminino</option>
+                <option value="other">Outros</option>
+            </select>
+
+
+             
+        </div>
+
+        <div class="linha">
+            <label for="street">Endereço*</label>
+            <input type="text" id="street" name="street"
+            
+            <label for="number">Número*</label>
+            <input type="number" id="number" name="number" 
+
+            <label for="neighbourhood">Bairro</label>
+            <input type="text" id="bairro" name="bairro">
+        </div>
+
+        <div class="linha">
+            <label for="city">Cidade*</label>
+            <input type="text" id="city" name="city"
+            <label for="state">Estado*</label>
+                    <select name="state" id="state" data-jsv-validators="require" />
+                    <option value="selecione">Selecione</option>
+                    <option value="AC">Acre</option>                                    <option value="AL">Alagoas</optio>                                   <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+                                
+
+        </div>
+    </div>
+
+</form>
+    
+</body>
+</html>
