@@ -1,8 +1,65 @@
 body{
     background-color: #030c33;
-    color: white;
+    
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
+    
 }
 
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 300px;
+    color: white;
+    
+}
+
+.principal{
+    
+    background-color: aliceblue;
+    padding-top: 35px;
+    
+    margin-left: 205px;
+    
+    width:63%;
+
+}
+.img{
+    width: 30%;
+}
+.linha{
+    
+    height: 27px;
+    
+    padding-left: 20px;
+    padding-top: 5px;
+    margin-right: 50px;
+    padding-bottom: 30px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: row;
+    
+
+}
+label{
+    padding: 23px
+}
+input:not([type="checkbox"]){
+    width: 90%;
+    margin-top: 4px;
+    padding: 10px;    
+    border: 1px solid #b2b2b2;
+   
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+   
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+   
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
