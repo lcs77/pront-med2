@@ -1,7 +1,7 @@
 body{
     background-color: #030c33;
     
-    max-width: 1200px;
+    
     margin: 0 auto;
     padding: 15px;
     
@@ -11,20 +11,38 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 300px;
+    padding-right: 80px;
     color: white;
     
 }
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+    ;
 
+}
+input{
+    display: block;
+    margin-left: 25px;
+    padding: 15px
+}
+
+h1{
+    font-size: 35px;
+}
 .principal{
+    
     
     background-color: aliceblue;
     padding-top: 35px;
     
-    margin-left: 205px;
+    margin-left: 285px;
     
-    width:63%;
-
+    width:53%;
+    border-radius:0.9%
+   
 }
 .img{
     width: 30%;
@@ -33,11 +51,14 @@ header{
     
     height: 27px;
     
-    padding-left: 20px;
+    
     padding-top: 5px;
-    margin-right: 50px;
+    
     padding-bottom: 30px;
     font-size: 25px;
+    margin-bottom: 25px;
+    
+    
     display: flex;
     justify-content: center;
     align-items:center;
@@ -45,8 +66,19 @@ header{
     
 
 }
+.ajuste{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: row;
+    
+    padding-left:20px;
+
+}
+
+
 label{
-    padding: 23px
+    padding: 25px
 }
 input:not([type="checkbox"]){
     width: 90%;
@@ -61,5 +93,25 @@ input:not([type="checkbox"]){
     box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
    
     -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    margin-right: 96px;
+  }
+  .submit{
+        padding-left: 200px;
+  }
+  input[type="submit"]{
+   width: 250px;
+    cursor: pointer;  
+    background: #030c33;
+    padding: 8px 5px;
+    color: #fff;
+    font-size: 20px;  
+    border: 1px solid #fff;   
+    margin-bottom: 10px;  
+    text-shadow: 0 1px 1px #333;
+   
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+   
     transition: all 0.2s linear;
   }
