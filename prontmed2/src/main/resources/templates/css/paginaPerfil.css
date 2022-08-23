@@ -169,6 +169,7 @@ textarea:-moz-placeholder{
     width: 400px;
     transition: all 0.3s ease-out;
     padding-right: 100px;
+    height: 150px;
     
   }
   .card:hover {
@@ -183,8 +184,8 @@ textarea:-moz-placeholder{
    
   .image {
     float: right;
-    max-width: 64px;
-    max-height: 64px;
+    max-width: 50px;
+    max-height: 50px;
   }
   .blue {
     border-left: 3px solid #030c33;
