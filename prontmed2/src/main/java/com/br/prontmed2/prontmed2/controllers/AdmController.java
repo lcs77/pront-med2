@@ -3,6 +3,7 @@ package com.br.prontmed2.prontmed2.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller 
 public class AdmController {
@@ -12,9 +13,9 @@ public class AdmController {
         return "perfil/landingPage";
     }
 
-    @RequestMapping(value = "/loginAdm", method=RequestMethod.GET)
+    @RequestMapping(value = "/login", method=RequestMethod.GET)
     public String login(){
-        return "logins/loginFuncionario";
+        return "a"
     }
 
 
