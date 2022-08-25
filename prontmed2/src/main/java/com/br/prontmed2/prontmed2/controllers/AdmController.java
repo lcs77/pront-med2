@@ -35,13 +35,10 @@ public class AdmController {
    //chamado do login de funcionario
     @RequestMapping( "/login")
     public String login(){
-<<<<<<< HEAD
-        return "";
-=======
+
         return "logins/loginFuncionario";
         
 
->>>>>>> 38b47e01744c017675c2f0b87d1071166bf443e4
     }
 
 
