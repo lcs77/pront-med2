@@ -20,16 +20,19 @@ public class AdmController {
         return "perfil/landingPage";
     }
 
+
+    //cadastro de administrador
     @RequestMapping(value = "/cadastroAdm", method=RequestMethod.GET)
     public String cadastro(){
         return "cadastros/cadastroAdm";
     }
+    //cadastro de administrador
     @RequestMapping(value = "/cadastroAdm", method=RequestMethod.POST)
     public String cadastro(AdmModel admModel){
         ar.save(admModel);
         return "cadastros/cadastroAdm";
     }
-   
+   //chamado do login de funcionario
     @RequestMapping( "/login")
     public String login(){
         return "logins/loginFuncionario";
