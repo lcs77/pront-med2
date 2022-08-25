@@ -15,7 +15,7 @@ public class AdmController {
 
     @RequestMapping(value = "/login", method=RequestMethod.GET)
     public String login(){
-        return "a"
+        return "";
     }
 
 
