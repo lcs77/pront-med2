@@ -6,17 +6,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+
+
 @Entity
 public class Agendamento {
+   
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-  
-
     @ManyToOne
-    private PacienteModel paciente;
+    private String cpf;
+   
+
     private String tipoAgenda;
     private String data;
     private String hora;
@@ -31,23 +34,15 @@ public class Agendamento {
         this.id = id;
     }
 
-    /**
-     * @return PacienteModel return the paciente
-     */
-    public PacienteModel getPaciente() {
-        return paciente;
+    public String getCpf() {
+        return cpf;
     }
 
-    /**
-     * @param paciente the paciente to set
-     */
-    public void setPaciente(PacienteModel paciente) {
-        this.paciente = paciente;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
-    /**
-     * @return String return the tipoAgenda
-     */
+
     public String getTipoAgenda() {
         return tipoAgenda;
     }

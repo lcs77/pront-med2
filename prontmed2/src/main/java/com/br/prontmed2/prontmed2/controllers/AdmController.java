@@ -12,7 +12,7 @@ import com.br.prontmed2.prontmed2.models.Agendamento;
 import com.br.prontmed2.prontmed2.models.PacienteModel;
 import com.br.prontmed2.prontmed2.repository.AdmRepository;
 import com.br.prontmed2.prontmed2.repository.AgendamentoRepository;
-import com.br.prontmed2.prontmed2.repository.PacienteRepository;
+
 
 @Controller 
 public class AdmController {
@@ -21,8 +21,7 @@ public class AdmController {
     private AdmRepository ar;
     @Autowired
     private AgendamentoRepository aRepository;
-    @Autowired
-    private PacienteRepository pRepository;
+    
 
     @RequestMapping(value = "/inicio", method=RequestMethod.GET)
     public String menu(){
@@ -56,12 +55,9 @@ public class AdmController {
 
 
     @RequestMapping(value = "/agendamentos", method=RequestMethod.POST)
-    public String addAgenda(@PathVariable("id")long id,Agendamento agendamento){
-       PacienteModel paciente = pRepository.findById(id);
-       agendamento.setPaciente(paciente);
-       aRepository.save(agendamento);
-
-        return "formularios/agendamento";
+    public String addAgenda(Agendamento agendamento){
+        aRepository.save(agendamento);
+        return "perfil/perfilMedico";
     }
     @RequestMapping(value = "/agendamentos", method=RequestMethod.GET)
     public String agenda(){
