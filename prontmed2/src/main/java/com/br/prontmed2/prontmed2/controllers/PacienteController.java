@@ -34,7 +34,6 @@ public class PacienteController{
     public String perfilPaciente(){
         return "perfil/perfilPaciente";
     }
-
     
     
 

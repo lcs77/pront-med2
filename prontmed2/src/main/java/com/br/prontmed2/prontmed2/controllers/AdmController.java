@@ -4,16 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.br.prontmed2.prontmed2.models.AdmModel;
+import com.br.prontmed2.prontmed2.models.AnamneseModel;
 import com.br.prontmed2.prontmed2.repository.AdmRepository;
+import com.br.prontmed2.prontmed2.repository.AnamneseRepository;
 
 @Controller 
 public class AdmController {
 
     @Autowired
     private AdmRepository ar;
+    @Autowired
+    private AnamneseRepository anaRepo;
 
     @RequestMapping(value = "/inicio", method=RequestMethod.GET)
     public String menu(){
@@ -40,6 +43,40 @@ public class AdmController {
         
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @RequestMapping(value = "/anamnese", method=RequestMethod.POST)
+    public String cadastro(AnamneseModel anamneseModel){
+        anaRepo.save(anamneseModel);
+        return "perfil/perfilMedico";
+    }
+
 
 
 

@@ -37,10 +37,68 @@ public class AnamneseModel {
     @Column(name = "problemasCardiacos", length = 100)
     private String problemasCardiacos;
 
-    
 
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
 
-    
-    
+    public PacienteModel getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(PacienteModel cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getExerciciosFisicos() {
+        return exerciciosFisicos;
+    }
+
+    public void setExerciciosFisicos(String exerciciosFisicos) {
+        this.exerciciosFisicos = exerciciosFisicos;
+    }
+
+    public String getAlimentacaoBalanceada() {
+        return alimentacaoBalanceada;
+    }
+
+    public void setAlimentacaoBalanceada(String alimentacaoBalanceada) {
+        this.alimentacaoBalanceada = alimentacaoBalanceada;
+    }
+
+    public String getTabagista() {
+        return tabagista;
+    }
+
+    public void setTabagista(String tabagista) {
+        this.tabagista = tabagista;
+    }
+
+    public String getAntecedentesAlergicos() {
+        return antecedentesAlergicos;
+    }
+
+    public void setAntecedentesAlergicos(String antecedentesAlergicos) {
+        this.antecedentesAlergicos = antecedentesAlergicos;
+    }
+
+    public String getProblemasOrtopedicos() {
+        return problemasOrtopedicos;
+    }
+
+    public void setProblemasOrtopedicos(String problemasOrtopedicos) {
+        this.problemasOrtopedicos = problemasOrtopedicos;
+    }
+
+    public String getProblemasCardiacos() {
+        return problemasCardiacos;
+    }
+
+    public void setProblemasCardiacos(String problemasCardiacos) {
+        this.problemasCardiacos = problemasCardiacos;
+    }
 }

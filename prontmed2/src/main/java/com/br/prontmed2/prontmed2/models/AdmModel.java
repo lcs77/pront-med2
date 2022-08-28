@@ -27,9 +27,6 @@ public class AdmModel {
     private String genero;
 
 
-    
-    
-    
 
     public long getId() {
         return id;
