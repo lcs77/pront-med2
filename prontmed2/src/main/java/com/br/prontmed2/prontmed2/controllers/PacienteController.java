@@ -27,7 +27,7 @@ public class PacienteController{
     @RequestMapping(value = "/cadastroPaciente", method=RequestMethod.POST)
     public String cadastro(PacienteModel pacienteModel){
         pacienteRepository.save(pacienteModel);
-        return "cadastros/cadastroAdm";
+        return "cadastros/cadastroPaciente";
     }
 
     @RequestMapping(value="/perfilPaciente", method=RequestMethod.GET)
