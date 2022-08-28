@@ -2,18 +2,27 @@ package com.br.prontmed2.prontmed2.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.br.prontmed2.prontmed2.models.AdmModel;
+import com.br.prontmed2.prontmed2.models.Agendamento;
+import com.br.prontmed2.prontmed2.models.PacienteModel;
 import com.br.prontmed2.prontmed2.repository.AdmRepository;
+import com.br.prontmed2.prontmed2.repository.AgendamentoRepository;
+import com.br.prontmed2.prontmed2.repository.PacienteRepository;
 
 @Controller 
 public class AdmController {
 
     @Autowired
     private AdmRepository ar;
+    @Autowired
+    private AgendamentoRepository aRepository;
+    @Autowired
+    private PacienteRepository pRepository;
 
     @RequestMapping(value = "/inicio", method=RequestMethod.GET)
     public String menu(){
@@ -38,7 +47,27 @@ public class AdmController {
 
         return "logins/loginFuncionario";
         
+    }
 
+    @RequestMapping( "/perfilAdm")
+    public String perfilAdm(){
+        return "perfil/perfilMedico";
+    }
+
+
+    @RequestMapping(value = "/agendamentos", method=RequestMethod.POST)
+    public String addAgenda(@PathVariable("id")long id,Agendamento agendamento){
+       PacienteModel paciente = pRepository.findById(id);
+       agendamento.setPaciente(paciente);
+       aRepository.save(agendamento);
+
+        return "formularios/agendamento";
+    }
+    @RequestMapping(value = "/agendamentos", method=RequestMethod.GET)
+    public String agenda(){
+       
+
+        return "formularios/agendamento";
     }
 
 
