@@ -20,13 +20,13 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">>
             <body>
                 <div th:each="anamnese : ${anamneses}" class="container">
                     <div class="row">
-                        <p>Nome: <span th:text="${anamnese.cpf}"></span></p>
-                        <p>Cpf: <span th:text="${anamnese.exerciciosFisicos}"></span></p>
-                        <p>Email: <span th:text="${anamnese.alimentacaoBalanceada}"></span></p>
-                        <p>Rg: <span th:text="${anamnese.tabagista}"></span></p>
-                        <p>Rg: <span th:text="${anamnese.antecedentesAlergicos}"></span></p>
-                        <p>Rg: <span th:text="${anamnese.problemasOrtopedicos}"></span></p>
-                        <p>Rg: <span th:text="${anamnese.problemasCardiacos}"></span></p>
+                        <p>CPF <span th:text="${anamnese.cpf}"></span></p>
+                        <p>Exercicios Fisicos <span th:text="${anamnese.exerciciosFisicos}"></span></p>
+                        <p>Alimentação Balanceada <span th:text="${anamnese.alimentacaoBalanceada}"></span></p>
+                        <p>Tabagista <span th:text="${anamnese.tabagista}"></span></p>
+                        <p>Antecendentes <span th:text="${anamnese.antecedentesAlergicos}"></span></p>
+                        <p>Problemas Ortopédicos <span th:text="${anamnese.problemasOrtopedicos}"></span></p>
+                        <p>Problemas Cardiacos<span th:text="${anamnese.problemasCardiacos}"></span></p>
                     </div>
                 </div>
             </body>

@@ -1,11 +1,18 @@
 package com.br.prontmed2.prontmed2.models;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class PacienteModel {
     
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private long id;
    
     @Column(name = "nome", length = 100)
     private String nome;
@@ -16,7 +23,7 @@ public class PacienteModel {
     @Column(name = "senha", length = 100)
     private String senha;
 
-    @Id
+    
     @Column(name = "cpf", length = 100)
     private String cpf;
 
@@ -138,5 +145,13 @@ public class PacienteModel {
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }

@@ -5,19 +5,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+
 
 
 @Entity
 public class AnamneseModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private long id;
 
-    @ManyToOne
-    private PacienteModel cpf;
+    @Column(name = "cpf", length = 100)
+    private String cpf;
 
     @Column(name = "exercicoFisicos", length = 100)
     private String exerciciosFisicos;
@@ -37,22 +38,9 @@ public class AnamneseModel {
     @Column(name = "problemasCardiacos", length = 100)
     private String problemasCardiacos;
 
+    @OneToOne
+    private PacienteModel paciente;
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public PacienteModel getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(PacienteModel cpf) {
-        this.cpf = cpf;
-    }
 
     public String getExerciciosFisicos() {
         return exerciciosFisicos;
@@ -100,5 +88,29 @@ public class AnamneseModel {
 
     public void setProblemasCardiacos(String problemasCardiacos) {
         this.problemasCardiacos = problemasCardiacos;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public PacienteModel getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(PacienteModel paciente) {
+        this.paciente = paciente;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }
