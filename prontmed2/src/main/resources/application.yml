@@ -8,10 +8,10 @@ spring:
     generate-ddl: true
     show-sql: true
   datasource:
-    url: jdbc:mysql://localhost:3306/prontmed
-    username: root
-    password: 84219019
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:postgresql://localhost:5432/pront2
+    username: postgres
+    password: 12345678
+    driver-class-name: org.postgresql.Driver
   application:
     name: prontmed
   mvc:
