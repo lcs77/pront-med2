@@ -9,7 +9,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-    <link rel="stylesheet" href="../">
+    <link rel="stylesheet" href="../css/paginaPerfil.css">
 
     <title> perfilMedico </title>
 </head>
@@ -19,7 +19,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">>
     <!--header começo-->
     <header>
         <div>
-        <h2>Lista De Pacientes</h2>
+        
             <div id="logo">
 
                 <img class="logo" src="../assets/img.png">
@@ -33,14 +33,31 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">>
             <img src="../assets/medico.png" class="imagem" alt>
 
             <body>
-                <div th:each="paciente : ${paciente}" class="container">
-                    <div class="row">
-                        <p>Nome: <span th:text="${paciente.nome}"></span></p>
-                        <p>Cpf: <span th:text="${paciente.cpf}"></span></p>
-                        <p>Email: <span th:text="${paciente.email}"></span></p>
-                        <p>Rg: <span th:text="${paciente.rg}"></span></p>
-                    </div>
-                </div>
+                
+
+
+                <table class="container">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Local</th>
+                            <th>Data</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="paciente: ${paciente}">
+                        
+                        <div class="row">
+                            <td><a th:href="${(#mvc.url('AC#detalhesEvento').arg(0,paciente.id)).build()}"><span th:text="${paciente.nome}"></span></a></td>
+                            
+                            <td><span th:text="${paciente.cpf}"></span></td>
+                            <td><span th:text="${paciente.email}"></span></td>
+                            
+                        </div>
+                    </tr>
+                </tbody>
+                </table>
             </body>
 
 

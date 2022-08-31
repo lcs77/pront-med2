@@ -2,6 +2,7 @@ package com.br.prontmed2.prontmed2.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -77,7 +78,7 @@ public class AdmController {
     }
    
 
-    @RequestMapping("/eventos")
+    @RequestMapping("/pacientes")
     public ModelAndView listaEventos(){
         ModelAndView mv = new ModelAndView("perfil/perfilMedico2");
         Iterable<PacienteModel> pModel = pr.findAll();
@@ -85,6 +86,22 @@ public class AdmController {
         return mv;
 
     }
+    @RequestMapping(value="/{id}", method=RequestMethod.GET)
+    public ModelAndView detalhesEvento(@PathVariable("id")long id){
+        PacienteModel pModel = pr.findById(id);
+        ModelAndView mv = new ModelAndView("perfil/perfilMedico3");
+        mv.addObject("paciente",pModel);
+        System.out.println("paciente"+ pModel);
+        return mv;
+
+    }
+
+
+
+
+
+
+
 
     @RequestMapping("/Prontuario")
     public ModelAndView Prontuario(){
