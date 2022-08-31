@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+xmlns:th="http://thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="../css/paginaPerfil.css">
+
+    <title> perfilPaciente </title>
+</head>
+<body>
+    <div class="sidebar">
+            <img src="../assets/medico.png" class="imagem" alt>
+
+            <body>
+                <div th:each="anamnese : ${anamneses}" class="container">
+                    <div class="row">
+                        <p>Nome: <span th:text="${anamnese.cpf}"></span></p>
+                        <p>Cpf: <span th:text="${anamnese.exerciciosFisicos}"></span></p>
+                        <p>Email: <span th:text="${anamnese.alimentacaoBalanceada}"></span></p>
+                        <p>Rg: <span th:text="${anamnese.tabagista}"></span></p>
+                        <p>Rg: <span th:text="${anamnese.antecedentesAlergicos}"></span></p>
+                        <p>Rg: <span th:text="${anamnese.problemasOrtopedicos}"></span></p>
+                        <p>Rg: <span th:text="${anamnese.problemasCardiacos}"></span></p>
+                    </div>
+                </div>
+            </body>
+
+
+</html>

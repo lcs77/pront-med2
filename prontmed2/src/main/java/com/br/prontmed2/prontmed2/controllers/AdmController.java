@@ -2,7 +2,6 @@ package com.br.prontmed2.prontmed2.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -34,13 +33,6 @@ public class AdmController {
 
     @Autowired
     private PacienteRepository pr;
-
-
-
-
-
-
-
 
 
     @RequestMapping(value = "/inicio", method=RequestMethod.GET)
@@ -94,41 +86,25 @@ public class AdmController {
 
     }
 
+    @RequestMapping("/Prontuario")
+    public ModelAndView Prontuario(){
+        ModelAndView mv = new ModelAndView("perfil/perfilPaciente2");
+        Iterable<AnamneseModel> aModel = anaRepo.findAll();
+        mv.addObject("anamneses",aModel);
+        return mv;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
+    @RequestMapping(value = "/anamnese", method=RequestMethod.GET)
+    public String anamnese(){
+        return "formularios/anamnese";
+    }
+   
 
     @RequestMapping(value = "/anamnese", method=RequestMethod.POST)
     public String cadastro(AnamneseModel anamneseModel){
         anaRepo.save(anamneseModel);
-        return "perfil/perfilMedico";
+        return "formularios/anamnese";
     }
 
 
-
-
-    
 }
