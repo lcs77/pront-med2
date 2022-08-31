@@ -1,35 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br"
+<html lang="en"
 xmlns:th="http://thymeleaf.org"
 xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">>
-
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link rel="stylesheet" href="../css/paginaPerfil.css">
-
-    <title> perfilPaciente </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
 </head>
 <body>
-    <div class="sidebar">
-            <img src="../assets/medico.png" class="imagem" alt>
+    <h1>Prontuario</h1>
 
-            <body>
-                <div th:each="anamnese : ${anamneses}" class="container">
-                    <div class="row">
-                        <p>CPF <span th:text="${anamnese.cpf}"></span></p>
-                        <p>Exercicios Fisicos <span th:text="${anamnese.exerciciosFisicos}"></span></p>
-                        <p>Alimentação Balanceada <span th:text="${anamnese.alimentacaoBalanceada}"></span></p>
-                        <p>Tabagista <span th:text="${anamnese.tabagista}"></span></p>
-                        <p>Antecendentes <span th:text="${anamnese.antecedentesAlergicos}"></span></p>
-                        <p>Problemas Ortopédicos <span th:text="${anamnese.problemasOrtopedicos}"></span></p>
-                        <p>Problemas Cardiacos<span th:text="${anamnese.problemasCardiacos}"></span></p>
-                    </div>
-                </div>
-            </body>
+    <h3><a href="/anamnese" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Adicionar Prontuario</a></h3>
+    <table class="container">
+        <thead>
+            <tr>
+                <th>Cpf</th>
+                <th>Exercicios Fisicos</th>
+                <th>Alimentacao Balanceada</th>
+                <th>Tabagista</th>
+                <th>Antecendentes Alergicos</th>
+                <th>Problemas Cardiacos</th>
+                <th>Consome Alcool</th>
+                <th>Problemas Ortopidicos</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        <tr th:each="anamnese : ${anamneses}">
+            <div class="row">
+                <td><span th:text="${anamnese.cpf}"></span></td>
+                <td><span th:text="${anamnese.exerciciosFisicos}"></span></td>
+                <td><span th:text="${anamnese.alimentacaoBalanceada}"></span></td>
+                <td><span th:text="${anamnese.tabagista}"></span></td>
+                <td><span th:text="${anamnese.antecedentesAlergicos}"></span></td>
+                <td><span th:text="${anamnese.problemasCardiacos}"></span></td>
+                <td><span th:text="${anamnese.consomeAlcool}"></span></td>
+                <td><span th:text="${anamnese.problemasOrtopedicos}"></span></td>
+            </div>
+        </tr>
+    </tbody>
+    </table>
 
 
+
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</body>
 </html>

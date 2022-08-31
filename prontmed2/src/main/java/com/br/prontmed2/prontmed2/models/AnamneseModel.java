@@ -38,6 +38,9 @@ public class AnamneseModel {
     @Column(name = "problemasCardiacos", length = 100)
     private String problemasCardiacos;
 
+    @Column(name = "consomeAlcool", length = 100)
+    private String consomeAlcool;
+
     @OneToOne
     private PacienteModel paciente;
 
@@ -112,5 +115,13 @@ public class AnamneseModel {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getConsomeAlcool() {
+        return consomeAlcool;
+    }
+
+    public void setConsomeAlcool(String consomeAlcool) {
+        this.consomeAlcool = consomeAlcool;
     }
 }
