@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+xmlns:th="http://thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="../css/paginaPerfil.css">
+
+    <title> perfilMedico </title>
+</head>
+<STYLE>A {text-decoration: none;} </STYLE>
+<body>
+    <input type="checkbox" id="check">
+    <!--header começo-->
+    <header>
+        <div>
+            <label for="check">
+            </label>
+            <div id="logo">
+
+                <img class="logo" src="../assets/img.png">
+
+                <div id="title" class="left">
+                    <h1>ProntMed</h1>
+                </div>
+            </div>
+    </header>
+    <div class="sidebar">
+            <img src="../assets/medico.png" class="imagem" alt>
+
+            <body>
+                <div th:each="paciente : ${paciente}" class="container">
+                    <div class="row">
+                        <p>Nome: <span th:text="${paciente.nome}"></span></p>
+                        <p>Cpf: <span th:text="${paciente.cpf}"></span></p>
+                        <p>Email: <span th:text="${paciente.email}"></span></p>
+                        <p>Rg: <span th:text="${paciente.rg}"></span></p>
+                    </div>
+                </div>
+            </body>
+
+
+</html>

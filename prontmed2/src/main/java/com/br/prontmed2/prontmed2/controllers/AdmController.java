@@ -2,9 +2,10 @@ package com.br.prontmed2.prontmed2.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.br.prontmed2.prontmed2.models.AdmModel;
 
@@ -14,7 +15,9 @@ import com.br.prontmed2.prontmed2.repository.AgendamentoRepository;
 
 
 import com.br.prontmed2.prontmed2.models.AnamneseModel;
+import com.br.prontmed2.prontmed2.models.PacienteModel;
 import com.br.prontmed2.prontmed2.repository.AnamneseRepository;
+import com.br.prontmed2.prontmed2.repository.PacienteRepository;
 
 
 @Controller 
@@ -28,6 +31,16 @@ public class AdmController {
     
     @Autowired
     private AnamneseRepository anaRepo;
+
+    @Autowired
+    private PacienteRepository pr;
+
+
+
+
+
+
+
 
 
     @RequestMapping(value = "/inicio", method=RequestMethod.GET)
@@ -69,6 +82,16 @@ public class AdmController {
     @RequestMapping(value = "/agendamentos", method=RequestMethod.GET)
     public String agenda(){
         return "formularios/agendamento";
+    }
+   
+
+    @RequestMapping("/eventos")
+    public ModelAndView listaEventos(){
+        ModelAndView mv = new ModelAndView("perfil/perfilMedico2");
+        Iterable<PacienteModel> pModel = pr.findAll();
+        mv.addObject("paciente",pModel);
+        return mv;
+
     }
 
 
