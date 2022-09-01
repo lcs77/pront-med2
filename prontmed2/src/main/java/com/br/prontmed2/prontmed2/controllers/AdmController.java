@@ -1,8 +1,13 @@
 package com.br.prontmed2.prontmed2.controllers;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+
+
 import org.springframework.web.bind.annotation.PathVariable;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -36,6 +41,24 @@ public class AdmController {
     private PacienteRepository pr;
 
 
+    @RequestMapping("/administradores")
+    public ModelAndView adms(){
+        ModelAndView mv = new ModelAndView("administradores/index");
+        Iterable<AdmModel> adModel = ar.findAll();
+        mv.addObject("administradores", adModel);
+        return mv;
+
+    }
+    @RequestMapping(value="/{id}", method=RequestMethod.GET)
+    public ModelAndView adms(@PathVariable("id")long id){
+        Optional<AdmModel> adModel = ar.findById(id);
+        ModelAndView mv = new ModelAndView("administradores/index");
+        mv.addObject("administradores", adModel);
+        System.out.println("administradores"+ adModel);
+        return mv;
+
+    }
+
     @RequestMapping(value = "/inicio", method=RequestMethod.GET)
     public String menu(){
         return "perfil/landingPage";
@@ -52,13 +75,6 @@ public class AdmController {
     public String cadastro(AdmModel admModel){
         ar.save(admModel);
         return "cadastros/cadastroAdm";
-    }
-   //chamado do login de funcionario
-    @RequestMapping( "/login")
-    public String login(){
-
-        return "logins/loginFuncionario";
-        
     }
 
     @RequestMapping( "/perfilAdm")
@@ -95,13 +111,6 @@ public class AdmController {
         return mv;
 
     }
-
-
-
-
-
-
-
 
     @RequestMapping("/Prontuario")
     public ModelAndView Prontuario(){

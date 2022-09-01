@@ -1,29 +1,57 @@
 package com.br.prontmed2.prontmed2.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "adm")
 public class AdmModel {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
+
+    @Column(name = "nome", length = 100)
     private String nome;
+
+    @Column(name = "email", length = 100)
     private String email;
+
+    @Column(name = "senha", length = 100)
     private String senha;
+
+    @Column(name = "cpf", length = 100)
     private String cpf;
+
+    @Column(name = "rg", length = 100)
     private String rg;
+
+    @Column(name = "endereco", length = 100)
     private String endereco;
+
+    @Column(name = "bairro", length = 100)
     private String bairro;
+
+    @Column(name = "cidade", length = 100)
     private String cidade;
-    private String matricula;
+
+    @Column(name = "crm", length = 100)
     private String crm;
+
+    @Column(name = "dataNasc", length = 100)
     private String dataNasc;
+
+    @Column(name = "telefone", length = 100)
     private String telefone;
+
+    @Column(name = "estado", length = 100)
     private String estado;
+
+    @Column(name = "genero", length = 100)
     private String genero;
 
 
@@ -111,16 +139,6 @@ public class AdmModel {
 
     public void setCidade(String cidade) {
         this.cidade = cidade;
-    }
-
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
     }
 
  
