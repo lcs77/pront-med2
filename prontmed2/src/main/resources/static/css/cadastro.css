@@ -52,7 +52,7 @@ h1{
   height: 27px;
   width: 50%;
   
-  padding-left :220px;
+  padding-left :250px;
   padding-top: 5px;
   
   padding-bottom: 30px;
@@ -110,3 +110,42 @@ h3{
   font-size: 30px;
   color: #fff;
 }
+.linha2{
+  
+  height: 27px;
+  width: 50%;
+  
+  padding-left : 300px;
+  padding-top: 5px;
+  
+  padding-bottom: 30px;
+  font-size: 25px;
+  margin-bottom: 25px;
+  
+  
+  display: flex;
+  flex-direction: row;
+  
+
+}
+.botao2{
+  width: 250px;
+  cursor: pointer;  
+  background: #030c33;
+  padding: 8px 5px;
+  color: #fff;
+  font-size: 20px;  
+  border: 1px solid #fff;    
+  text-shadow: 0 1px 1px #333;
+  margin-left: 1100px;
+  margin-top: 20%;
+  
+ 
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+ 
+  transition: all 0.2s linear;
+
+}
+
+
