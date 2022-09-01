@@ -106,3 +106,7 @@ input[type="submit"]{
   align-items:center;
   justify-content: center;
 }
+h3{
+  font-size: 30px;
+  color: #fff;
+}

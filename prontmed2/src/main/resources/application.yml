@@ -8,9 +8,9 @@ spring:
     generate-ddl: true
     show-sql: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/pront2
+    url: jdbc:postgresql://localhost:5432/pront3
     username: postgres
-    password: 12345678
+    password: senha123
     driver-class-name: org.postgresql.Driver
   application:
     name: prontmed
