@@ -135,3 +135,43 @@ input:not([type="checkbox"]){
     transition: all 0.2s linear;
 
 }
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+  }
+  .card {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 70px;
+    margin: 20px;
+    width: 400px;
+    transition: all 0.3s ease-out;
+    padding-right: 100px;
+    height: 150px;
+    background-color: white;
+    
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+   
+  .card p {
+    color: #a3a5ae;
+
+  }
+   
+  .image {
+    float: right;
+    max-width: 50px;
+    max-height: 50px;
+    margin-top: -20px;
+  }
+  .blue {
+    border-left: 3px solid #030c33;
+  }
+  a{
+    color:rgba(0, 0, 0, 0.967);
+  }

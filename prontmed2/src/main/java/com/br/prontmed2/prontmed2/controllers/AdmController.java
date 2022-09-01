@@ -80,7 +80,7 @@ public class AdmController {
 
     @RequestMapping("/pacientes")
     public ModelAndView listaEventos(){
-        ModelAndView mv = new ModelAndView("perfil/perfilMedico2");
+        ModelAndView mv = new ModelAndView("perfil/verPaciente");
         Iterable<PacienteModel> pModel = pr.findAll();
         mv.addObject("paciente",pModel);
         return mv;
@@ -89,7 +89,7 @@ public class AdmController {
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
     public ModelAndView detalhesEvento(@PathVariable("id")long id){
         PacienteModel pModel = pr.findById(id);
-        ModelAndView mv = new ModelAndView("perfil/perfilMedico3");
+        ModelAndView mv = new ModelAndView("perfil/pacienteMenu");
         mv.addObject("paciente",pModel);
         System.out.println("paciente"+ pModel);
         return mv;

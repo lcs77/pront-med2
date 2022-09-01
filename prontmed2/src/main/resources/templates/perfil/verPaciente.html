@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br"
 xmlns:th="http://thymeleaf.org"
-xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">>
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
 
 <head>
@@ -9,42 +9,41 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-    <link rel="stylesheet" href="../css/paginaPerfil.css">
+    
+    <link rel="stylesheet" href="../css/cadastroPaciente.css">
 
     <title> perfilMedico </title>
 </head>
-<STYLE>A {text-decoration: none;} </STYLE>
+
 <body>
-    <input type="checkbox" id="check">
-    <!--header começo-->
+    
     <header>
-        <div>
+        
         
             <div id="logo">
 
-                <img class="logo" src="../assets/img.png">
-
-                <div id="title" class="left">
-                    <h1>ProntMed</h1>
-                </div>
+                <ul>
+                    <img alt="logoprontmed" class="img" src="../assets/img.png">
+                    <h3>Prontmed</h3>
+                    
+                    
+                </ul>
+                
             </div>
     </header>
-    <div class="sidebar">
-            <img src="../assets/medico.png" class="imagem" alt>
-
-            <body>
-                
 
 
-                <table class="container">
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Local</th>
-                            <th>Data</th>
+           <table class="principal">
+                    
+                        <div class="tabela">
+                            <tr>
+                                <th>Nome</th>
+                                <th>Cpf</th>
+                                <th>Email</th>
                             
-                        </tr>
-                    </thead>
+                            </tr>
+                        </div>
+                    
                     <tbody>
                     <tr th:each="paciente: ${paciente}">
                         
